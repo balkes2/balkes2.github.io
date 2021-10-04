@@ -13,9 +13,10 @@
 
 .modal-content {
     background-color: black;
-    margin: 15% auto;
     border: 1px solid black;
     width: 80%;
+    margin: auto;
+    border-radius: 5px;
 }
 
 .close {
@@ -45,8 +46,22 @@
     display: flex;
     justify-content: space-between;
     align-self: center;
+    align-items: center;
 }
 
 video {
     width: 100%;
+}
+
+@media only screen and (max-width: 768px){
+    .modal-content{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .modal-content{
+        width: 100%;
+        border-radius: 0;
+    }
 }

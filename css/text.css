@@ -31,18 +31,18 @@ p.p-2 {
     margin: 0;
 }
 
-@media only screen and (max-width: 900px) and (min-width: 400px){
+@media only screen and (max-width: 1080px){
     h1 {
-        font-size: 52px;
+        font-size: 62px;
         margin-top: var(--padding-10);
         margin-bottom: var(--padding-10);
     }
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 900px){
     h1 {
-        font-size: 42px;
-        margin-top: 0;
+        font-size: 52px;
+        margin-top: var(--padding-10);
         margin-bottom: var(--padding-10);
     }
 }
@@ -66,5 +66,13 @@ p.p-2 {
     p.p-2 {
         font-size: 16px;
         line-height: 24px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    h1 {
+        font-size: 42px;
+        margin-top: 0;
+        margin-bottom: var(--padding-10);
     }
 }

@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-    max-width: 1080px;
+    max-width: 1000px;
     margin: auto;
     padding-left: var(--padding-50);
     padding-right: var(--padding-50);
@@ -45,8 +45,13 @@ header > a{
 }
 
 #elevator-pitch > div.container {
+    display: flex;
+    flex-direction: column;
     color: white;
     padding: var(--padding-50);
+    max-width: 1000px;
+    margin: auto;
+    align-items: center;
 }
 
 #elevator-pitch h2 {
@@ -71,11 +76,21 @@ header > a{
     margin-bottom: var(--padding-10);
 }
 
+#join-beta p {
+    max-width: 600px;
+}
+
 footer {
     background-color: var(--color-gray-2);
-    color: white;
+    color: var(--color-gray-3);
     padding: var(--padding-10);
     font-size: 14px;
+}
+
+@media only screen and (max-width: 1080px){
+    #join-beta > div.container{
+        grid-template-columns: 3fr 2fr;
+    }
 }
 
 @media only screen and (max-width: 768px){
