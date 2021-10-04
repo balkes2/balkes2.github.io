@@ -1,0 +1,143 @@
+nav {
+    color: var(--color-blue-1);
+    padding: var(--padding-10);
+}
+
+nav > div {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 250px 1fr 625px;   
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    grid-column-start: 3;
+    grid-column-gap: var(--padding-10);
+    margin: auto;
+    list-style-type: none;
+    align-items: center;
+}
+
+.nav-item a {
+    color: var(--color-blue-1);
+    width: 100%;
+    margin: auto;
+    vertical-align: middle;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nav-button {
+    margin: 0;
+}
+
+.nav-button a {
+    display: none;
+}
+
+.nav-button button {
+    display: inline;
+}
+
+nav button {
+    margin-right: 0;
+}
+
+.navbar {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--color-gray-1);
+}
+
+@media only screen and (max-width: 950px){
+    nav.active {
+        border-bottom: 1px solid var(--color-gray-4);
+    }
+
+    nav div {
+        text-align: left;
+        display: grid;
+        grid-template-columns: 180px 1fr 25px;
+    }
+
+    nav img {
+        max-width: 180px;
+    }
+
+    .navbar {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        align-items: flex-end;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color:white;
+        list-style: none;
+        margin: 0;
+        width: 100%;
+        padding: 0;
+        grid-column-start: 1;
+        grid-column-end: span 3;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        padding-top: 30px;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+        padding: var(--padding-10);
+        border-top: 1px solid var(--color-gray-4);
+    } 
+
+    .nav-item a{
+        color: var(--color-gray-1);
+    }
+
+    .nav-button a {
+        display: inline;
+    }
+
+    .nav-button button {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin: auto;
+        grid-column: 3;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}

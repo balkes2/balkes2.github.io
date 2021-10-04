@@ -1,0 +1,118 @@
+:root {
+    --color-gray-1: #33393c;
+    --color-gray-2: #656c70;
+    --color-gray-3: #AEB8BD;
+    --color-gray-4: #DAE2E5;
+    --color-blue-1: #3877F6;
+    --color-blue-gray-5: #EbF3F7;
+    --padding-50: 50px;
+    --padding-20: 20px;
+    --padding-10: 10px;
+}
+
+
+body {
+    background-color: white;
+    color: var(--color-gray-1);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 16px;
+    margin: 0;
+}
+
+.container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: var(--padding-50);
+    padding-right: var(--padding-50);
+}
+
+header {
+    background-color: var(--color-gray-1);
+    padding: var(--padding-10);
+    margin: auto;   
+}
+
+header > a{
+    margin: 0;
+    color: white;
+    font-size: 14px;
+}
+
+
+#elevator-pitch {
+    background-color: var(--color-gray-1);
+}
+
+#elevator-pitch > div.container {
+    color: white;
+    padding: var(--padding-50);
+}
+
+#elevator-pitch h2 {
+    margin-bottom: var(--padding-10);
+}
+
+#join-beta {
+    background-color: var(--color-gray-1);
+}
+
+#join-beta > div.container{
+    color: white;
+    text-align: left;
+    padding: var(--padding-50);
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    column-gap: var(--padding-50);
+}
+
+#join-beta h1 {
+    margin: 0;
+    margin-bottom: var(--padding-10);
+}
+
+footer {
+    background-color: var(--color-gray-2);
+    color: white;
+    padding: var(--padding-10);
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 768px){
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    #join-beta > div.container{
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        max-width: 350px;
+    }
+
+    #join-beta p{
+        margin-bottom: var(--padding-20);
+    }
+}
+
+#sticky-image-div {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    display: none;
+}
+
+#sticky-image-div img {
+    height: 525px;
+    margin: auto;
+}
+
+.hide {
+    display: none;
+}
